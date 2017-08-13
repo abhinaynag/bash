@@ -1,0 +1,12 @@
+Doing NBT name scan for addresses from 192.168.43.200
+
+IP address       NetBIOS Name     Server    User             MAC address      
+------------------------------------------------------------------------------
+Doing NBT name scan for addresses from 192.168.43.203
+
+IP address       NetBIOS Name     Server    User             MAC address      
+------------------------------------------------------------------------------
+Doing NBT name scan for addresses from 192.168.43.205
+
+IP address       NetBIOS Name     Server    User             MAC address      
+------------------------------------------------------------------------------

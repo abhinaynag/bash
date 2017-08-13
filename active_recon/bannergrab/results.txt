@@ -1,0 +1,12 @@
+# Nmap 6.47 scan initiated Sat Jan  2 23:57:16 2016 as: nmap --script=/usr/share/nmap/scripts//banner.nse,/usr/share/nmap/scripts//smb-os-discovery.nse -oG results.txt -f
+# Nmap done at Sat Jan  2 23:57:17 2016 -- 0 IP addresses (0 hosts up) scanned in 0.98 seconds
+banner.nse,/usr/share/nmap/scripts//smb-os-discovery.nse -oG results.txt --append-output 192.168.43.220
+# Nmap 6.47 scan initiated Sat Jan  2 23:57:16 2016 as: nmap --script=/usr/share/nmap/scripts//banner.nse,/usr/share/nmap/scripts//smb-os-discovery.nse -oG results.txt --append-output 192.168.43.200
+# Nmap 6.47 scan initiated Sat Jan  2 23:57:16 2016 as: nmap --script=/usr/share/nmap/scripts//banner.nse,/usr/share/nmap/scripts//smb-os-discovery.nse -oG results.txt --append-output 192.168.43.210
+# Nmap done at Sat Jan  2 23:57:17 2016 -- 1 IP address (0 hosts up) scanned in 1.41 seconds
+Host: 192.168.43.210 ()	Status: Up
+Host: 192.168.43.210 ()	Ports: 80/open/tcp//http///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 1025/open/tcp//NFS-or-IIS///, 1033/open/tcp//netinfo///, 1038/open/tcp//mtqp///, 2522/open/tcp//windb///, 3389/open/tcp//ms-wbt-server///, 7999/open/tcp//irdmi2///	Ignored State: closed (990)
+# Nmap done at Sat Jan  2 23:57:49 2016 -- 1 IP address (1 host up) scanned in 33.06 seconds
+Host: 192.168.43.220 ()	Status: Up
+Host: 192.168.43.220 ()	Ports: 21/open/tcp//ftp///, 53/open/tcp//domain///, 88/open/tcp//kerberos-sec///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 389/open/tcp//ldap///, 445/open/tcp//microsoft-ds///, 464/open/tcp//kpasswd5///, 593/open/tcp//http-rpc-epmap///, 636/open/tcp//ldapssl///, 3268/open/tcp//globalcatLDAP///, 3269/open/tcp//globalcatLDAPssl///, 3389/open/tcp//ms-wbt-server///, 49152/open/tcp//unknown///, 49153/open/tcp//unknown///, 49154/open/tcp//unknown///, 49155/open/tcp//unknown///, 49157/open/tcp//unknown///, 49158/open/tcp//unknown///, 49176/open/tcp//unknown///	Ignored State: closed (980)
+# Nmap done at Sat Jan  2 23:57:54 2016 -- 1 IP address (1 host up) scanned in 38.81 seconds

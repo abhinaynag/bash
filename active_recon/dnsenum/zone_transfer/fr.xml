@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<records>
+    <record address="146.171.13.195" mname="ns1.spark.co.nz" type="SOA"/>
+    <record Version="Not Available" address="146.171.13.195" recursive="True" target="ns1.spark.co.nz" type="NS"/>
+    <record Version="Not Available" address="146.171.247.25" recursive="True" target="ns2.spark.co.nz" type="NS"/>
+    <record Version="Not Available" address="146.171.13.194" recursive="True" target="ns3.spark.co.nz" type="NS"/>
+    <record address="146.171.15.101" exchange="envoy.spark.co.nz" type="MX"/>
+    <record address="146.171.248.36" name="spark.co.nz" type="A"/>
+    <record name="spark.co.nz" strings="v=spf1 mx a ip4:146.171.254.3 ip4:146.171.15.101 ip4:146.171.15.100 include:mktomail.com include:mailout.snaphire.com ~all" type="TXT"/>
+    <record name="spark.co.nz" strings="MS=ms24556913" type="TXT"/>
+    <record name="spark.co.nz" strings="/meYl2s48B3Bi74VpWd7lzCCnE097tSbb0H8+vqTZOQ/ncDgLt8qGr3QZixp2IEQVP6xoibfSbE3mN1jmpLr8Q==" type="TXT"/>
+    <record address="146.171.246.23" name="_sipfederationtls._tcp.spark.co.nz" port="5061" target="sip.spark.co.nz" type="SRV"/>
+    <scaninfo arguments="/usr/bin/dnsrecon -d spark.co.nz -axfr" time="2015-12-04 20:04:21.559148"/>
+    <domain domain_name="spark.co.nz"/>
+</records>

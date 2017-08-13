@@ -1,0 +1,2 @@
+# Nmap 6.47 scan initiated Sat Jan  2 21:22:14 2016 as: nmap -sn -oG output.txt
+# Nmap done at Sat Jan  2 21:22:14 2016 -- 0 IP addresses (0 hosts up) scanned in 0.00 seconds
