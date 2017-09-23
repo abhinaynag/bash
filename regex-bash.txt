@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo -e "**BRIEF** \n \n" > out.txt
+
+echo -e -n "* DateTime: " >> out.txt
+cat "in.txt" | grep -P -o "(\d{2}\/\d{2}\/\d{2}\s\d{2}:\d{2}:\d{2})\s" |  sort -r | grep -m1 "" >> out.txt
+
+echo -e -n "\n\n* Sensors: " >> out.txt
+cat in.txt |  grep -P -o  "\sesm(\w+)?(\W+)?(\w+)?\s" | sort -u | tr '\n' ', ' >> out.txt
+
+echo -e "\n \n* Signatures:\n\n" >> out.txt
+cat in.txt | grep -P -o "((snort:\s\[1:\d+:\d+\]).*: \d{1}\])" | sort -u | sed "s/^/* /g">> out.txt
+
+echo -e "\n \n* PCAP Attached: " >> out.txt
+
+echo -e "\n \n**SOURCE**\n\n" >> out.txt
+
+echo -e -n "* Source IP(s): " >> out.txt
+cat in.txt | grep -P -o "\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):\d+\s->" | grep -P -o "\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" | sort -u | tr '\n' ', ' >> out.txt
+
+echo -e -n "\n \n*  X-Forward-For : (Please Confirm with PCAP) " >> out.txt
+cat in.txt | grep -P -o "(\d{2}\/\d{2}\/\d{2,4})\s(\d{2}:\d{2}:\d{2})\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" | grep -P -o "(\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" | sort -u |tr '\n' ', ' >> out.txt
+
+echo -e -n "\n\n* Port: Number of unique ports is: " >> out.txt
+cat in.txt | grep -P -o "\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):\d+\s->" | grep -P -o ":\d+\s" | sort -u | wc -l >> out.txt
+ 
+echo -e -n "\n* Hostname: " >> out.txt
+
+echo -e "\n\n\n**Destination**\n\n" >> out.txt
+
+echo -e -n "* IP(s): ">> out.txt
+cat in.txt | grep -P -o -- "->\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):\d+" | grep -P -o "\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" | sort -u | tr '\n' ', ' >> out.txt
+
+echo -e -n "\n\n* Port: " >> out.txt
+cat in.txt | grep -P -o -- "->\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):\d+" | grep -P -o ":\d+"| sort -u | sed "s/://g"| tr '\n' ', ' >> out.txt
+
+echo -e "\n\n* Hostname: " >> out.txt
+ 
+echo -e "\n\n\n **Add RAW data as a Nugget**" >> out.txt
